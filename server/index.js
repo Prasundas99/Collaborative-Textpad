@@ -1,6 +1,8 @@
-const Document = require("./Document")
+const Document = require("./model/Document")
+const dbConnect = require('./config/db')
 
-
+//Db connected
+dbConnect();
 
 const io = require("socket.io")(3001, {
   cors: {
